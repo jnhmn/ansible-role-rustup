@@ -10,3 +10,5 @@
       ignore_errors: true
       register: rustup_uninstall_cmd
       changed_when: "'uninstalled' in rustup_uninstall_cmd.stdout"
+      become: "{{ true if rustup_become_user else false }}"
+      become_user: "{{ rustup_become_user }}"

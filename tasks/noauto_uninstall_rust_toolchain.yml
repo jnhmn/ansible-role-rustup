@@ -15,3 +15,5 @@
         - rustup_installed_rust_version is defined
         - rustup_installed_rust_version != rustup_rust_version
         - rustup_installed_rust_version != ""
+      become: "{{ true if rustup_become_user else false }}"
+      become_user: "{{ rustup_become_user }}"

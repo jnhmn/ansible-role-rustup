@@ -12,3 +12,5 @@ rustup_download_url: "https://static.rust-lang.org/rustup/archive/{{ rustup_vers
 rustup_download_dir: "/tmp"
 
 rustup_rust_version: "1.97.1"
+
+rustup_become_user: ""

@@ -7,8 +7,8 @@
         content: |
           #!/bin/sh
           # Add Cargo bin to the PATH for all users
-          if [ -d "$HOME/.cargo/bin" ]; then
-              PATH="$HOME/.cargo/bin:$PATH"
+          if [ -d "{{ rustup_cargo_dir }}/bin" ]; then
+              PATH="{{ rustup_cargo_dir }}/bin:$PATH"
           fi
         mode: "0644"
       become: true
